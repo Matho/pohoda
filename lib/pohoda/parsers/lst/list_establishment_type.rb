@@ -5,7 +5,7 @@ module Pohoda
         include ParserCore::BaseParser
 
         def establishment
-          array_of_at(Est::EstablishmentType, ['lst:establishment'])
+          array_of_at(Est::EstablishmentType2, ['lst:establishment'])
         end
 
         def to_h
