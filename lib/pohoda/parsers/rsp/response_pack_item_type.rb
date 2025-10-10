@@ -305,7 +305,7 @@ module Pohoda
         end
 
         def list_centre
-          submodel_at(LCen::ListCentreType, 'lCen:listCentre')
+          submodel_at(LCen::ListCentreType2, 'lCen:listCentre')
         end
 
         def list_activity
