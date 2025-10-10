@@ -300,7 +300,7 @@ module Pohoda
           hash[:list_balance_request] = list_balance_request.to_h if has? 'lst:listBalanceRequest'
           hash[:create_accounting_double_entry] = create_accounting_double_entry.to_h if has? 'lst:createAccountingDoubleEntry'
           hash[:list_user_code] = list_user_code.to_h if has? 'lst:listUserCode'
-          hash[:list_accounting_unit_request] = list_accounting_unit_request.to_h if has? 'acu:listAccountingUnitRequest'
+          hash[:list_accounting_unit_request] = list_accounting_unit_request.to_h if has? 'acu:listAccountingUnit'
           hash[:list_accounting_double_entry_request] = list_accounting_double_entry_request.to_h if has? 'lst:listAccountingDoubleEntryRequest'
           hash[:list_accounting_single_entry_request] = list_accounting_single_entry_request.to_h if has? 'lst:listAccountingSingleEntryRequest'
           hash[:list_account_request] = list_account_request.to_h if has? 'lst:listAccountRequest'
