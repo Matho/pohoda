@@ -6,14 +6,7 @@ module Pohoda
         include Ftr::Groups::GroupFilter2
 
         def builder
-          root = Ox::Element.new(name)
-          root = add_attributes_and_namespaces(root)
-          #
-          # mega.each do |r|
-          #   r.nodes.each { |n| root << n }
-          # end
-
-          root
+          super
         end
       end
     end

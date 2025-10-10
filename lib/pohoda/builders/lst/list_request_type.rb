@@ -7,6 +7,8 @@ module Pohoda
         def builder
           root = Ox::Element.new(name)
           add_attributes_and_namespaces(root)
+
+          root
         end
       end
     end
