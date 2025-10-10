@@ -5,19 +5,14 @@ module Pohoda
         include ParserCore::BaseParser
 
         def item_account
-          at 'lst:itemAccount'
-        end
-
-        def item_account_attributes
-          attributes_at 'lst:itemAccount'
+          array_of_at(Lst::ItemAccountType, ['lst:itemAccount'])
         end
 
         def to_h
           hash = {}
           hash[:attributes] = attributes
 
-          hash[:item_account] = item_account if has? 'lst:itemAccount'
-          hash[:item_account_attributes] = item_account_attributes if has? 'lst:itemAccount'
+          hash[:item_account] = item_account.map(&:to_h) if has? 'lst:itemAccount'
 
           hash
           super.merge(hash)
