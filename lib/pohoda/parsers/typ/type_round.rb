@@ -20,7 +20,7 @@ module Pohoda
           hash[:price_round] = price_round if has? 'typ:priceRound'
           hash[:price_round_attributes] = price_round_attributes if has? 'typ:priceRound'
 
-          mega.inject(hash) { |memo, r| memo.merge r }
+          super.merge(hash)
         end
       end
     end
