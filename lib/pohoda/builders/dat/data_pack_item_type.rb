@@ -143,9 +143,9 @@ module Pohoda
           if data.key? :list_contract_request
             root << LCon::ListRequestContractType.new('lCon:listContractRequest', data[:list_contract_request]).builder
           end
-          if data.key? :list_centre_request
-            root << Lst::ListRequestType.new('lst:listCentreRequest', data[:list_centre_request]).builder
-          end
+          # if data.key? :list_centre_request
+          #   root << Lst::ListRequestType.new('lst:listCentreRequest', data[:list_centre_request]).builder
+          # end
           if data.key? :list_numeric_series_request
             root << Lst::ListRequestAgendasType.new('lst:listNumericSeriesRequest', data[:list_numeric_series_request]).builder
           end
