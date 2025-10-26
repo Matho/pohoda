@@ -12,10 +12,9 @@ module Pohoda
         def to_h
           hash = {}
           hash[:attributes] = attributes
-
           hash[:stock_price_item] = stock_price_item.map(&:to_h) if has? 'stk:stockPriceItem'
 
-          mega.inject(hash) { |memo, r| memo.merge r }
+          super.merge(hash)
         end
       end
     end

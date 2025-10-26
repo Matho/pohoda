@@ -13,7 +13,7 @@ module Pohoda
         end
 
         def stock_detail
-          array_of_at(Stk::StockItemType, ['stk:stockDetail', 'stk:stockItem'])
+          array_of_at(Stk::StockItemType2, ['stk:stockDetail', 'stk:stockItem'])
         end
 
         def stock_attach
