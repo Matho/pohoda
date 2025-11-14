@@ -221,7 +221,7 @@ module Pohoda
         end
 
         def list_contract
-          submodel_at(LCon::ListContractType, 'lCon:listContract')
+          submodel_at(LCon::ListContractType2, 'lCon:listContract')
         end
 
         def list_category
