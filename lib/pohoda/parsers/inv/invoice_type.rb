@@ -28,6 +28,10 @@ module Pohoda
           submodel_at(Inv::InvoiceSummaryType, 'inv:invoiceSummary')
         end
 
+        def attachments
+          submodel_at(Inv::AttachmentType, 'inv:attachments')
+        end
+
         def eet
           submodel_at(Typ::EETType, 'inv:EET')
         end
@@ -46,6 +50,7 @@ module Pohoda
           hash[:invoice_retentions] = invoice_retentions.map(&:to_h) if has? 'inv:invoiceRetentions'
           hash[:invoice_detail] = invoice_detail.to_h if has? 'inv:invoiceDetail'
           hash[:invoice_summary] = invoice_summary.to_h if has? 'inv:invoiceSummary'
+          hash[:attachments] = attachments.to_h if has? 'inv:attachments'
           hash[:eet] = eet.to_h if has? 'inv:EET'
           hash[:print] = print.map(&:to_h) if has? 'inv:print'
 
