@@ -9,7 +9,7 @@ module Pohoda
           root = add_attributes_and_namespaces(root)
 
           if data.key? :url_address
-            root << Typ::TypeUrlAddress.new('type:urlAddress', data[:url_address]).builder
+            root << Typ::TypeUrlAddress.new('typ:urlAddress', data[:url_address]).builder
           end
 
           root
