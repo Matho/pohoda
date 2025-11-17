@@ -30,6 +30,9 @@ module Pohoda
           if data.key? :invoice_summary
             root << Inv::InvoiceSummaryType.new('inv:invoiceSummary', data[:invoice_summary]).builder
           end
+          if data.key? :attachments
+            root << Inv::AttachmentType.new('inv:attachments', data[:attachments]).builder
+          end
           if data.key? :eet
             root << Typ::EETType.new('inv:EET', data[:eet]).builder
           end
